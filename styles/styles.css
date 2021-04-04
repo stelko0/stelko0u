@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto:ital,wght@1,500&display=swap');
+
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+html, body{
+  height: 100%;
+}
+body {
+  /* max-height: 100vh; */
+  background-image: url("../images/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+/*Navigation Right Side */
+.navbar-collapse{
+  flex-grow: 0;
+}
+
+.social-bar{
+  padding-top: 15px;
+}
+
+
+
+.col-4{
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  background-color: #fafafa;
+  border-radius: 15px;
+}
+
+.img-fluid{
+  width: 260px;
+  border-radius: 150px;
+}
+
+
+.col-sm-4 {
+  background-color: rgba(255, 255, 255, 0.42);
+  border-radius: 15px;
+  padding: 1.8em;
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+  width: 80%;
+}
+
+.social {
+  width: 20%;
+  margin: 5px;
+  margin-top: 10px;
+}
+
+.img-fluid {
+  border-radius: 200px;
+}
+
+.navbar-brand{
+  font-family: Permanent Marker;
+  font-size: 22px;
+}
+
+#clock {
+  font-weight: 400;
+  font-size: 18px;
+  font-family: Roboto, cursive;
+}
+#daysCounter{
+  font-weight: 400;
+  font-size: 18px;
+  font-family: Roboto, cursive;
+}
+.nav-link{
+  font-family: Roboto;
+}
+
+footer{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: auto;
+  background-color: #111;
+  padding-top: 5px;
+  text-align: center;
+}
+
+.title{
+  font-family: Permanent Marker;
+  color: #fff;
+}
+
+h1 {
+  color: white;
+  margin: 0 auto;
+  width: 90%;
+  padding: 0.5em;
+  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.17);
+}
+
+.schedule {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.schedule .day {
+  width: 18%;
+}
+
+.schedule .day .day-title {
+  color: #404040;
+  font-weight: 200;
+  font-size: 18px;
+}
+
+.schedule .day .subjects .subject .time {
+  color: #404040;
+  font-weight: 200;
+  font-size: 16px;
+  margin-bottom: -0.4em;
+}
+
+.schedule .day .subjects .subject .subject-title {
+  margin-bottom: 1em;
+}
+
+@media screen and (max-width: 1200px) {
+  .schedule {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .schedule .day {
+    width: 90%;
+  }
+  footer{
+    bottom: 0;
+  }
+  .container{
+    transform: translateY(-90px);
+  }
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.42);
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  padding: 1em;
+  margin: 1em;
+  font-size: 17px;
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+}
+
+
+
+
+
+
+
+

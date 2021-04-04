@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stelian - School</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles/styles.css">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,500;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+    
+<header>
+ <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">stelko0u</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="school.html">School</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" id="demo">School</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+</a>
+</header>
+
+            <script>
+                // Set the date we're counting down to
+                var countDownDate = new Date("Jul 30, 2021 10:30:00").getTime();
+                
+                // Update the count down every 1 second
+                var x = setInterval(function() {
+                
+                  // Get today's date and time
+                  var now = new Date().getTime();
+                    
+                  // Find the distance between now and the count down date
+                  var distance = countDownDate - now;
+                    
+                  // Time calculations for days, hours, minutes and seconds
+                  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                    
+                  // Output the result in an element with id="demo"
+                  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+                  + minutes + "m " + seconds + "s ";
+                    
+                  // If the count down is over, write some text 
+                  if (distance < 0) {
+                    clearInterval(x);
+                    document.getElementById("demo").innerHTML = "EXPIRED";
+                  }
+                }, 1000);
+                </script>
+
+
+
+  <h1>11A School schedule</h1>
+    <!-- = table -->
+    <div class="schedule" id="schedule">
+      <div class="day card" v-for="entry in schedule">
+        <div class="day-title">{{ entry.day }}</div>
+        <!-- = tr -->
+        <div class="subjects">
+          <!-- = td -->
+          <div class="subject" v-for="subjectEntry in entry.subjects">
+            <div class="time">{{ subjectEntry.time }}</div>
+            <div class="subject-title">{{ subjectEntry.subject }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container" style="padding-bottom: 2em;">
+      <div class="row" style="justify-content: center;">
+          <div class="col-sm-4" >
+              <h2>ВАКАНЦИИ</h2>
+              <p>03.04.2021 г. – 11.04.2021 г. вкл. – пролетна за 8 – 11 клас</p>
+              <p>08.04.2021 г. – 11.04.2021 г. вкл. – пролетна за 12 клас</p>
+                <p>.</p>
+              <h2>НЕУЧЕБНИ ДНИ:</h2>
+              <p>19.05.2021 г. – ДЗИ по БЕЛ</p>
+              <p>21.05.2021 г. – втори ДЗИ</p>
+              <p>25.05.2021 г. -  неучебен, но присъствен ден за училищни, просветни и културни дейности</p>
+              <p>16.06.2021 г. – НВО по БЕЛ в края на X клас</p>
+              <p>18.06.2021 г. – НВО по математика в края на X клас</p>
+          </div>
+        </div>  
+      </div>  
+
+
+         <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Vue JS -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+ 
+    <!-- Custom JS -->
+    <script src="./scripts/index.js"></script>
+    <script src="scripts/scripts.js"></script>
+    <footer style="position: relative;">
+      <h1>hi</h1>
+    </footer>
+  </body>
+</html>
